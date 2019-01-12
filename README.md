@@ -1,2 +1,2 @@
-# Syslog-Canary---MS-Office
-A set of VBA scripts for MS Office Documents for Blue Team usage
+# CEF Syslog Canary
+A set of VBA scripts, AutoIT, and Powershell code for Blue Team usage.
