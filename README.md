@@ -62,7 +62,7 @@ These UDFs will need to be placed in the "include" folder in the AutoIT installa
 
 The code  has the core variables (syslog and CEF header) near the top and will need to be tweaked before compiling.
 
-### Powershell
+### Powershell Sample (CEFEncodedSyslog.ps1)
 
 This is a copy of the powershell module that's dropped to the device by the office documents. It's used to send syslog through .NET calls and is provided for transparency.
 
