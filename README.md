@@ -7,15 +7,15 @@ A set of VBA scripts, AutoIT, and Powershell code for Blue Team usage.
   
 Office document VBA come with some basic manual/hand coded obfuscation techniques:
 
-•	VBA code splatted and suspect functions specifically renamed/stubbed.
-•	Uses WMI calls to avoid using cmd/PowerShell directly from Office app.
-•	Word document inner contents: 
-    o	"VBAProject.bin" renamed to "obfuproject.txt"
-    o	[Content_Types].xml - reference to "bin" swapped to "txt"
-    o	document.xml.rels - reference to "VBAProject.bin" swapped with "obfuproject.txt".  
-         Above 3 are basic vba obfuscation inside the document to fool manual analysis.
-    o	"vbaProject.bin.rels" renamed to "obfuproject.txt.rels".  
-        	This maintains macro function references.
+- VBA code splatted and suspect functions specifically renamed/stubbed.
+- Uses WMI calls to avoid using cmd/PowerShell directly from Office app.
+- Word XML document inner contents: 
+  - "VBAProject.bin" renamed to "obfuproject.txt"
+  - [Content_Types].xml - reference to "bin" swapped to "txt"
+  - document.xml.rels - reference to "VBAProject.bin" swapped with "obfuproject.txt".  
+    - Above 3 are basic vba obfuscation inside the document to fool manual analysis.
+  - "vbaProject.bin.rels" renamed to "obfuproject.txt.rels".
+    - This maintains macro function references.
         
 •	Converted to legacy format XML (2003-2007), then renamed to ".doc". 
     o	 This bypasses email filtering for "docm/macro" type documents
