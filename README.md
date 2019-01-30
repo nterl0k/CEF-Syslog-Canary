@@ -18,10 +18,9 @@ Office document VBA has the following quality and manual/hand coded obfuscation 
   - document.xml.rels - reference to "VBAProject.bin" swapped with "obfuproject.txt".  
     - Above 3 are basic vba obfuscation inside the document to fool manual analysis.
   - "vbaProject.bin.rels" renamed to "obfuproject.txt.rels".
-    - This maintains macro function references.
-        
-•	Converted to legacy format XML (2003-2007), then renamed to ".doc". 
-    o	 This bypasses email filtering for "docm/macro" type documents
+    - This maintains macro function references.      
+- Converted to legacy format XML (2003-2007), then renamed to ".doc".
+  - This bypasses email filtering for "docm/macro" type documents
 
 
 Both objects require modication of the following variables, either in the advanced document properties or inside the AutoIt code:
