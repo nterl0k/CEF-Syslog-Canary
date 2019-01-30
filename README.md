@@ -46,7 +46,7 @@ Office document VBA has the following quality and manual/hand coded obfuscation 
 - Converted to legacy format XML (2003-2007), then renamed to ".doc".
   - This bypasses email filtering for "docm/macro" type documents
   
-  ![Image of Advanced Properties](https://github.com/nterl0k/CEF-Syslog-Canar/adv_properties.png)
+  ![Image of Advanced Properties](https://github.com/nterl0k/CEF-Syslog-Canary/blob/master/Adv_Properties.png)
 
 ## AutoIT Code
 
