@@ -51,7 +51,7 @@ Office document VBA has the following quality and manual/hand coded obfuscation 
 Access the general CEF variables in the Office documents by going to **File -> Info -> Properties -> Advanced Properties.**
   ![Image of Advanced Properties](https://github.com/nterl0k/CEF-Syslog-Canary/blob/master/Adv_Properties.png)
 
-### AutoIT Code [ SyslogCanary.au3 and download.ico ]
+### AutoIT Code [ Syslog Canary.au3 and download.ico ]
 
 This code can be compiled by any recent version of AutoIT. The resultant exe is meant to emulate a "home grown" program that allows for a single use local admin account. The code requires the inclusion of 2 UDF which can be found at the following links:
 
