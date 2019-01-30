@@ -27,7 +27,7 @@ These variable will either in the advanced document properties or inside the Aut
 -	DeviceProd: Recommend change to something recognizable like “Canary Feed”
 -	Priority: Adjust as needed 1-10
 
-### Office Documents
+### Office Documents [ Canary Document v3.1(Clean).doc and Canary Workbook 1.0(Clean).xlsm ]
 
   The office documents are provided in a vanilla state and will need to be slightly modified to fit your environment. Both documents have form/fields that "unhide" when the canary macro runs to display either random username/passwords or a fake set of executive employee + salary ranges. 
   
@@ -51,7 +51,7 @@ Office document VBA has the following quality and manual/hand coded obfuscation 
 Access the general CEF variables in the Office documents by going to **File -> Info -> Properties -> Advanced Properties.**
   ![Image of Advanced Properties](https://github.com/nterl0k/CEF-Syslog-Canary/blob/master/Adv_Properties.png)
 
-### AutoIT Code
+### AutoIT Code [ SyslogCanary.au3 and download.ico ]
 
 This code can be compiled by any recent version of AutoIT. The resultant exe is meant to emulate a "home grown" program that allows for a single use local admin account. The code requires the inclusion of 2 UDF which can be found at the following links:
 
@@ -60,9 +60,11 @@ This code can be compiled by any recent version of AutoIT. The resultant exe is 
 
 These UDFs will need to be placed in the "include" folder in the AutoIT installation.
 
+download.ico is included to mask the stock AutoIT icon, swap out if you want.
+
 The code  has the core variables (syslog and CEF header) near the top and will need to be tweaked before compiling.
 
-### Powershell Sample (CEFEncodedSyslog.ps1)
+### Powershell Sample [ CEFSyslogEncoded.ps1 ]
 
 This is a copy of the powershell module that's dropped to the device by the office documents. It's used to send syslog through .NET calls and is provided for transparency.
 
