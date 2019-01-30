@@ -5,8 +5,11 @@ A set of VBA scripts, AutoIT, and Powershell code for Blue Team usage.
   
   The office documents are provided in a vanilla state and will need to be slightly modified to fit your environment. Both documents have form/fields that "unhide" when when the canary marco runs to display either random username/passwords or a fake set of executive employee + salary ranges. 
   
-Office document VBA come with some basic manual/hand coded obfuscation techniques:
-
+Office document VBA has the following quality and manual/hand coded obfuscation techniques:
+- Embedded base64 encoded PowerShell function for sending information via PowerShell.
+  - Gets dumped to User %temp% folder and deleted upon document exit
+- Local file is run which calls back to the indicated syslog target/port 
+  - Works with pure IP or DNS
 - VBA code splatted and suspect functions specifically renamed/stubbed.
 - Uses WMI calls to avoid using cmd/PowerShell directly from Office app.
 - Word XML document inner contents: 
