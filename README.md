@@ -1,8 +1,26 @@
 # CEF Syslog Canary
 A set of VBA scripts, AutoIT, and Powershell code for Blue Team usage.
 
-  These artifacts are intended to be used as a way to signal on adversay access to your network. The basic thought was to have some documents and/or an executable that when run would call home to a SIEM(or other logging platform) via a CEF syslog burst. Each of the artifacts here have been crafted with that thought in mind.
-  
+These artifacts are intended to be used as a way to signal on adversay access to your network. The basic thought was to have some documents and/or an executable that when run would call home to a SIEM(or other logging platform) via a CEF syslog burst. Each of the artifacts here have been crafted with that thought in mind.
+
+## Global Options
+
+Any of these objects require modication prior to usage in your environment. I've tried to keep the variable names consistent where possible. The most important variables to set will be "SyslogTgt" and "SyslogPrt", the artifacts will not communicate with your syslog server otherwise. The of the 6 additional variables, while not critical will allow you to enhance/tailor the CEF syslog header to your environment. 
+
+These variable will either in the advanced document properties or inside the AutoIt code (prior to compiling):
+ 
+-	SyslogTgt: IP or FQDN/Hostname of your syslog/CEF receiver 
+-	SyslogPrt: Port of your syslog/CEF receiver
+
+-	EventMsg: The Message field (recommend leaving alone)
+-	EventName: The Event Name (recommend leaving alone)
+-	EventID: The Event ID  (recommend leaving alone)
+-	DeviceVen: Recommend changing to your org/project name
+-	DeviceProd: Recommend change to something recognizable like “Canary Feed”
+-	Priority: Adjust as needed 1-10
+
+## Office Documents
+
   The office documents are provided in a vanilla state and will need to be slightly modified to fit your environment. Both documents have form/fields that "unhide" when when the canary marco runs to display either random username/passwords or a fake set of executive employee + salary ranges. 
   
 Office document VBA has the following quality and manual/hand coded obfuscation techniques:
@@ -22,15 +40,21 @@ Office document VBA has the following quality and manual/hand coded obfuscation 
 - Converted to legacy format XML (2003-2007), then renamed to ".doc".
   - This bypasses email filtering for "docm/macro" type documents
 
+## AutoIt Code
 
-Both objects require modication of the following variables, either in the advanced document properties or inside the AutoIt code:
- 
--	SyslogTgt: IP or FQDN/Hostname of your syslog/CEF receiver 
--	SyslogPrt: Port of your syslog/CEF receiver
--	EventMsg: The Message field (recommend leaving alone)
--	EventName: The Event Name (recommend leaving alone)
--	EventID: The Event ID  (recommend leaving alone)
--	DeviceVen: Recommend changing to your org/project name
--	DeviceProd: Recommend change to something recognizable like “Canary Feed”
--	Priority: Adjust as needed 1-10
+This code can be compiled by any recent version of AutoIt. The resultant exe is meant to emulate a "home grown" program that allows for a single use local admin account. The code requires the inclusion of 2 UDF which can be found at the following links
+
+- https://www.autoitscript.com/forum/topic/184817-syslogsend-udf-send-messages-to-a-syslog-server/
+- https://www.autoitscript.com/forum/topic/74118-local-account-udf/
+
+These UDFs will need to be placed in the "include" folder in the AutoIT installation.
+
+## Credits
+Inspiration/stripped down powershell function to send syslog
+- https://github.com/poshsecurity/Posh-SYSLOG
+
+
+AutoIt forum UDF authors for the Syslog and Local Account functions used
+- https://www.autoitscript.com/forum/topic/184817-syslogsend-udf-send-messages-to-a-syslog-server/
+- https://www.autoitscript.com/forum/topic/74118-local-account-udf/
 
