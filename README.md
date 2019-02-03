@@ -13,7 +13,7 @@ These artifacts were all crafted to use CEF as the main means of transmitting in
 
 ### Core Syslog/CEF Options and Functions
 
-Any of these objects **require modification** prior to usage in your environment. I've tried to keep the variable names consistent between artifacts where possible. The most important variables to set will be **"SyslogTgt" and "SyslogPrt"**, the artifacts will not communicate with your syslog server otherwise. These variables will be either in the advanced document properties or inside the AutoIT code (prior to compiling):
+Any of the canary objects **require modification** prior to usage in your environment. I've tried to keep the variable names consistent between artifacts where possible. The most important variables to set will be **"SyslogTgt" and "SyslogPrt"**, the artifacts will not communicate with your syslog server otherwise. These variables will be either in the advanced document properties or inside the AutoIT code (prior to compiling):
 -	SyslogTgt: IP or FQDN/Hostname of your syslog/CEF receiver 
 -	SyslogPrt: Port of your syslog/CEF receiver
 
