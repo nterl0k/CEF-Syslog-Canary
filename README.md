@@ -1,5 +1,5 @@
 # CEF Syslog Canary
-A set of VBA scripts, AutoIT, and Powershell code for Blue Team usage. ![Image of Blue Canary CEF](https://github.com/nterl0k/CEF-Syslog-Canary/blob/master/Images/blue_canary_cef.png)
+A set of VBA scripts, AutoIT, and Powershell code for Blue Team usage. ![](https://github.com/nterl0k/CEF-Syslog-Canary/blob/master/Images/blue_canary_cef.png)
 
 These artifacts are intended to be used as a way to signal on adversary access to your network. The basic thought was to have some documents and/or an executable that when run would call home to a SIEM(or other logging platform) via a CEF syslog burst. Each of the artifacts here have been crafted with that thought in mind.
 
@@ -57,7 +57,7 @@ Office document VBA has the following qualities:
   - This bypasses email filtering for "docm/macro" type documents
   
 Access the general CEF variables in the Office documents by going to **File -> Info -> Properties -> Advanced Properties.**
-  ![Image of Advanced Properties](https://github.com/nterl0k/CEF-Syslog-Canary/blob/master/Images/Adv_Properties.png)
+  ![](https://github.com/nterl0k/CEF-Syslog-Canary/blob/master/Images/Adv_Properties.png)
 
 
 ### Powershell Sample [ CEFSyslogEncoded.ps1 ]
