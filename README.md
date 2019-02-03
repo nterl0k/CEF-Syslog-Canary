@@ -1,13 +1,13 @@
 # CEF Syslog Canary
-A set of VBA scripts, AutoIT, and Powershell code for Blue Team usage. ![Canary](https://github.com/nterl0k/CEF-Syslog-Canary/blob/master/Images/blue_canary_cef.png)
+A set of VBA scripts, AutoIT, and PowerShell code for Blue Team usage. ![Canary](https://github.com/nterl0k/CEF-Syslog-Canary/blob/master/Images/blue_canary_cef.png)
 
-These artifacts are intended to be used as a way to signal on adversary access to your network. The basic thought was to have some documents and/or an executable that when run would call home to a SIEM(or other logging platform) via a CEF syslog burst. Each of the artifacts here have been crafted with that thought in mind.
+These artifacts are intended to be used as a way to signal on adversary access to your network. The basic thought was to have some documents and/or an executable that when run would call home to a SIEM (or other logging platform) via a CEF syslog burst. Each of the artifacts here have been crafted with that thought in mind.
 
 The documents function essentially like a "maldoc", in that they call WMI/PowerShell from macro functions. The basic function has been redesigned to provide blue team awareness instead of a compromised user/network. They will be caught by some email filtering or end-point protection as suspicious.
 
 ### A word about the Common Event Format (CEF)
 
-These artifacts were all crafted to use CEF as the main means of transmitting information back to a monitoring solution. As such any additional function or data that is needed can be added using a standard CEF variable keypair value method. The best place to reference CEF syntax and usage is through official documentation
+These artifacts were all crafted to use CEF as the main means of transmitting information back to a monitoring solution. As such any additional function or data that is needed can be added using a standard CEF variable key pair value method. The best place to reference CEF syntax and usage is through official documentation
 
 [HPE/Microfocus CEF Guidance](https://community.softwaregrp.com/t5/ArcSight-Connectors/ArcSight-Common-Event-Format-CEF-Implementation-Standard/ta-p/1645557)
 
@@ -33,7 +33,7 @@ Each object (Office Docs or AutoIT) will attempt to gather the following informa
 - Public IP Address
 - Calling program/document and location
 - Running Processes
-- AutoIT/Word document present a pseodo random generated user/password to the user. The user generated is also passed, but the user/password array can be swapped out for any canary accounts in your environment.
+- AutoIT/Word document present a pseudo random generated user/password to the user. The user generated is also passed, but the user/password array can be swapped out for any canary accounts in your environment.
 
 ### Office Documents [ Canary Document v3.1(Clean).doc and Canary Workbook 1.0(Clean).xlsm ]
 
@@ -60,9 +60,9 @@ Access the general CEF variables in the Office documents by going to **File -> I
 ![Props](https://github.com/nterl0k/CEF-Syslog-Canary/blob/master/Images/wordprops.png)
 
 
-### Powershell Sample [ CEFSyslogEncoded.ps1 ]
+### PowerShell Sample [ CEFSyslogEncoded.ps1 ]
 
-This is a copy of the powershell module that's dropped to the device by the office documents. It's used to send syslog through .NET calls and is provided for transparency.
+This is a copy of the PowerShell module that's dropped to the device by the office documents. It's used to send syslog through .NET calls and is provided for transparency.
 
 ### AutoIT Code [ Syslog Canary.au3 and download.ico ]
 
@@ -75,7 +75,9 @@ These UDFs will need to be placed in the "include" folder in the AutoIT installa
 
 download.ico is included to mask the stock AutoIT icon, swap out if you want.
 
-The AutoIT code has the aformention core variables (syslog and CEF header) near the top and will need to be tweaked before compiling.
+The AutoIT code has the aforementioned core variables (syslog and CEF header) near the top and will need to be tweaked before compiling. The following should look approximately like the section of code that needs to be modified prior to compilation:
+![autoit](https://github.com/nterl0k/CEF-Syslog-Canary/blob/master/Images/autoitvars.png)
+
 
 ### Credits
 Inspiration/stripped down PowerShell function to send syslog
@@ -85,4 +87,3 @@ Inspiration/stripped down PowerShell function to send syslog
 AutoIT forum UDF authors for the Syslog and Local Account functions used
 - https://www.autoitscript.com/forum/topic/184817-syslogsend-udf-send-messages-to-a-syslog-server/
 - https://www.autoitscript.com/forum/topic/74118-local-account-udf/
-
