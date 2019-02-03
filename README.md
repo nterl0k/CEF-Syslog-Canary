@@ -57,7 +57,7 @@ Office document VBA has the following qualities:
   - This bypasses email filtering for "docm/macro" type documents
   
 Access the general CEF variables in the Office documents by going to **File -> Info -> Properties -> Advanced Properties.**
-![Props](https://github.com/nterl0k/CEF-Syslog-Canary/Images/Adv_Properties.png)
+![Props](https://github.com/nterl0k/CEF-Syslog-Canary/blob/master/Images/adv_properties.png)
 
 
 ### Powershell Sample [ CEFSyslogEncoded.ps1 ]
