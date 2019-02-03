@@ -75,7 +75,22 @@ These UDFs will need to be placed in the "include" folder in the AutoIT installa
 
 download.ico is included to mask the stock AutoIT icon, swap out if you want.
 
-The code  has the core variables (syslog and CEF header) near the top and will need to be tweaked before compiling.
+The code  has the core variables (syslog and CEF header) near the top and will need to be tweaked before compiling: The snippet below should represent an mostly accurate code sample.
+
+; Set your global CEF / Syslog variables ####CHANGE ME####
+
+Global $SyslogTgt = "YOUR_SERVER_HERE" 		; Your syslog reciever server or target IP
+Global $SyslogPrt = 514 		              ; Your syslog reciever port
+
+; These variables control the CEF header, configure as needed. ####CHANGE ME####
+
+Global $EventMsg = "This is a warning for canary executable file usage"	; The Message field (recommend leaving alone)
+Global $EventName =	"Canary File Execution"								              ; The Event Name (recommend leaving alone)
+Global $EventID	= "Canary_Exe"										                     	; The Event ID  (recommend leaving alone)
+Global $DeviceVen =	"Your_Company"									                  	; Recommend changing to your org/project name
+Global $DeviceProd = "Canary_File"									                  	; Recommend change to something recognizable like “Canary Feed”
+Global $Priority = "6"													                        ; Adjust as needed 1-10
+
 
 ### Credits
 Inspiration/stripped down PowerShell function to send syslog
