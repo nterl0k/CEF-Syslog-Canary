@@ -49,7 +49,7 @@ Office document VBA has the following quality and manual/hand coded obfuscation 
   - This bypasses email filtering for "docm/macro" type documents
   
 Access the general CEF variables in the Office documents by going to **File -> Info -> Properties -> Advanced Properties.**
-  ![Image of Advanced Properties](https://github.com/nterl0k/CEF-Syslog-Canary/blob/master/Adv_Properties.png)
+  ![Image of Advanced Properties](https://github.com/nterl0k/CEF-Syslog-Canary/blob/master/images/Adv_Properties.png)
 
 ### AutoIT Code [ Syslog Canary.au3 and download.ico ]
 
