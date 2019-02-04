@@ -35,7 +35,7 @@ Each object (Office Docs or AutoIT) will attempt to gather the following informa
 - Running Processes
 - AutoIT/Word document present a pseudo random generated user/password to the user. The user generated is also passed, but the user/password array can be swapped out for any canary accounts in your environment.
 
-### Office Documents [ Canary Document v3.1(Clean).doc and Canary Workbook 1.0(Clean).xlsm ]
+### Office Documents [ Canary Document v3.1(Base).doc and Canary Workbook 1.0(Base).xlsm ]
 
   The office documents are provided in a vanilla state and will need to be slightly modified to fit your environment. Both documents have form/fields that "unhide" when the canary macro runs to display either random username/passwords or a fake set of executive employee + salary ranges. 
   
