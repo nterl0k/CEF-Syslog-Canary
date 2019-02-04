@@ -64,7 +64,7 @@ Access the general CEF variables in the Office documents by going to **File -> I
 
 This is a copy of the PowerShell module that's dropped to the device by the office documents. It's used to send syslog through .NET calls and is provided for transparency.
 
-### AutoIT Code [ Syslog Canary.au3 and download.ico ]
+### AutoIT Code [ Syslog Canary(base).au3 and download.ico ]
 
 This code can be compiled by any recent version of AutoIT. The resultant exe is meant to emulate a "home grown" program that allows for a single use local admin account. The code requires the inclusion of 2 UDF which can be found at the following links:
 
