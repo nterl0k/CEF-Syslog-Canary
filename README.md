@@ -35,12 +35,12 @@ Each object (Office Docs or AutoIT) will attempt to gather the following informa
 - Running Processes
 - AutoIT/Word document present a pseudo random generated user/password to the user. The user generated is also passed, but the user/password array can be swapped out for any canary accounts in your environment.
 
-### Office Documents [ Canary Document v3.1(Base).doc and Canary Workbook 1.0(Base).xlsm ]
+### Office Documents [ Canary Document v3.3(Base).doc and Canary Workbook 1.3(Base).xlsm ]
 
   The office documents are provided in a vanilla state and will need to be slightly modified to fit your environment. Both documents have form/fields that "unhide" when the canary macro runs to display either random username/passwords or a fake set of executive employee + salary ranges. 
   
 Office document VBA has the following qualities:
-- Embedded base64 encoded PowerShell function for sending information via PowerShell.
+- Embedded PowerShell function for sending information via PowerShell.
   - Gets dumped to User %temp% folder and deleted upon document exit
 - Local file is run which calls back to the indicated syslog target/port 
   - Works with pure IP or DNS
@@ -62,7 +62,7 @@ Access the general CEF variables in the Office documents by going to **File -> I
 
 ### PowerShell Sample [ CEFSyslogEncoded.ps1 ]
 
-This is a copy of the PowerShell module that's dropped to the device by the office documents. It's used to send syslog through .NET calls and is provided for transparency.
+This is a copy of the PowerShell module that's dropped to the device by the office documents. It's used to send syslog through .NET calls and is provided for transparency, it is also open to inspection in the macro VBS.
 
 ### AutoIT Code [ Syslog Canary(base).au3 and download.ico ]
 
